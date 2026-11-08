@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Muhammad Shayan (Shaan) — Graphic Designer. Logo, packaging, banner, flyer, social media, t-shirt, illustration and stationery design.">
+  <meta name="theme-color" content="#101010">
+  <title>Muhammad Shayan — Graphic Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101010;
+      --surface: #181818;
+      --surface-2: #202020;
+      --text: #f4f1eb;
+      --muted: #aaa69e;
+      --line: rgba(255,255,255,.12);
+      --accent: #d6ff62;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: "DM Sans", sans-serif; line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: rgba(16,16,16,.88);
+      backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font: 800 20px Manrope, sans-serif; letter-spacing: -1px; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 30px; color: var(--muted); font-size: 13px; }
+    .nav-links a:hover, .footer-links a:hover { color: var(--accent); }
+    .nav-cta { color: var(--bg) !important; background: var(--accent); padding: 11px 17px; border-radius: 4px; font-weight: 700; }
+    .menu-btn { display: none; background: none; color: var(--text); border: 1px solid var(--line); padding: 8px 12px; border-radius: 4px; }
+    .hero { padding: 112px 0 100px; border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; }
+    h1,h2,h3,p { margin-top: 0; }
+    h1 { font: 800 clamp(48px, 8vw, 100px)/.99 Manrope, sans-serif; letter-spacing: -6px; max-width: 950px; margin: 24px 0; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-bottom { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-top: 44px; }
+    .intro { max-width: 530px; color: var(--muted); font-size: 17px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 20px; border: 1px solid var(--line); border-radius: 4px; font-size: 13px; font-weight: 700; transition: .2s; }
+    .btn.primary { background: var(--accent); color: #111; border-color: var(--accent); }
+    .btn:hover { transform: translateY(-3px); }
+    .scroll-note { margin-top: 72px; color: #777; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
+    section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 38px; }
+    h2 { font: 700 clamp(34px, 5vw, 55px)/1.08 Manrope, sans-serif; letter-spacing: -2.5px; margin: 10px 0 0; }
+    .section-note { color: var(--muted); max-width: 330px; font-size: 14px; margin: 0; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
+    .filter { cursor: pointer; border: 1px solid var(--line); color: var(--muted); background: transparent; padding: 9px 14px; border-radius: 3px; font-size: 12px; }
+    .filter.active, .filter:hover { color: #111; background: var(--accent); border-color: var(--accent); }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .project { min-width: 0; }
+    .project[hidden] { display: none; }
+    .project-link { display: block; color: inherit; }
+    .project-art { aspect-ratio: 1.42; overflow: hidden; border-radius: 5px; background: var(--surface); position: relative; }
+    .project-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 5px; }
+    .project-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .project-info { display: flex; justify-content: space-between; align-items: start; gap: 16px; padding: 17px 2px 0; }
+    .project-info h3 { font: 700 18px Manrope, sans-serif; margin: 0 0 4px; }
+    .project-info p { color: var(--muted); font-size: 12px; margin: 0; }
+    .project-number { color: var(--accent); font-size: 12px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+    .about-copy { color: var(--muted); font-size: 16px; max-width: 570px; }
+    .about-copy strong { color: var(--text); }
+    .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 32px; }
+    .stat { background: var(--surface); padding: 22px; border: 1px solid var(--line); }
+    .stat strong { display: block; color: var(--accent); font: 800 30px Manrope; }
+    .stat span { color: var(--muted); font-size: 11px; }
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .skill { background: var(--surface); border: 1px solid var(--line); padding: 19px; }
+    .skill small { color: var(--accent); letter-spacing: 1px; font-size: 10px; }
+    .skill h3 { font: 700 16px Manrope; margin: 7px 0 0; }
+    .tools { color: var(--muted); margin-top: 25px; font-size: 13px; }
+    .services { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .service { padding: 25px; min-height: 155px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .service span { color: var(--accent); font-size: 11px; }
+    .service h3 { font: 700 17px Manrope; margin: 22px 0 6px; }
+    .service p { color: var(--muted); font-size: 12px; margin: 0; }
+    .contact { background: var(--accent); color: #111; padding: 85px 0; }
+    .contact .eyebrow { color: #333; }
+    .contact h2 { font-size: clamp(42px, 7vw, 78px); max-width: 780px; }
+    .contact-row { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-top: 35px; }
+    .contact-row p { max-width: 410px; margin: 0; color: #333; }
+    .contact .btn { border-color: #111; color: #111; }
+    .contact .btn:hover { background: #111; color: var(--accent); }
+    footer { padding: 25px 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--muted); font-size: 11px; }
+    .footer-links { display: flex; gap: 20px; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s, transform .65s; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    .project-detail-hero { padding: 88px 0 55px; border-bottom: 1px solid var(--line); }
+    .back-link { display: inline-block; color: var(--muted); font-size: 12px; margin-bottom: 35px; }
+    .back-link:hover { color: var(--accent); }
+    .detail-intro { color: var(--muted); max-width: 620px; font-size: 16px; margin-top: 20px; }
+    .detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .detail-item { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+    .detail-item img { display: block; width: 100%; aspect-ratio: 1.35; object-fit: cover; }
+    .detail-caption { padding: 16px 18px; }
+    .detail-caption h3 { font: 700 16px Manrope; margin: 0 0 5px; }
+    .detail-caption p { color: var(--muted); font-size: 12px; margin: 0; }
+    @media (max-width: 600px) { .detail-grid { grid-template-columns: 1fr; } }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .nav { min-height: 66px; }
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 66px; left: 0; right: 0; padding: 20px 24px 24px; background: #151515; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 18px; }
+      .nav-links.open { display: flex; }
+      .nav-cta { text-align: center; }
+      .hero { padding: 80px 0 65px; }
+      h1 { letter-spacing: -3px; }
+      .hero-bottom, .section-head, .contact-row { align-items: start; flex-direction: column; }
+      .scroll-note { margin-top: 48px; }
+      section { padding: 72px 0; }
+      .projects { gap: 25px 14px; }
+      .project-info h3 { font-size: 15px; }
+      .project-info p { font-size: 11px; }
+      .about-grid { grid-template-columns: 1fr; gap: 35px; }
+      .services { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 480px) {
+      .projects { grid-template-columns: 1fr; }
+      .services { grid-template-columns: 1fr; }
+      .skills { grid-template-columns: 1fr 1fr; }
+      .footer-inner { flex-direction: column; align-items: start; }
+      .footer-links { flex-wrap: wrap; }
+    }
+    .service-cta { display:block; background:var(--accent); color:#111; }
+    .service-cta span, .service-cta p { color:#333; }
+    .service-cta:hover { background:#e6ff94; }
+    .contact .btn.fiverr { background:#111; color:var(--accent); }
+    .contact .btn.fiverr:hover { background:#000; }
+    .btn.fiverr { background:var(--accent); color:#111; border-color:var(--accent); }
+
+    /* ---------- Hero banner ---------- */
+    .hero2 { padding: 26px 0 0; }
+    .stage { position: relative; aspect-ratio: 16 / 9; /* must match your desktop banner shape */ border-radius: 14px; overflow: hidden; background: #0b0b0b; border: 1px solid var(--line); isolation: isolate; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(18px,2.6vw,34px); }
+    .stage-img, .stage-img img { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .stage-img { z-index: -2; }
+    .stage-img img { object-fit: cover; object-position: center; transform: none; }
+    .stage::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(16,16,16,.92) 0%, rgba(16,16,16,.5) 34%, rgba(16,16,16,0) 62%), linear-gradient(0deg, rgba(16,16,16,.88) 0%, rgba(16,16,16,0) 52%); }
+    .stage-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--text); }
+    .stage-top a:hover { color: var(--accent); }
+    .live { white-space: nowrap; display: inline-flex; align-items: center; gap: 9px; }
+    .live i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(214,255,98,.7); animation: pulse 2s infinite; }
+    .stage-mid { display: flex; align-items: flex-start; gap: 26px; margin-top: clamp(10px,3vw,40px); }
+    .stage-count { font: 800 clamp(40px,6vw,76px)/1 Manrope, sans-serif; letter-spacing: -4px; color: var(--accent); }
+    .stage-count small { display: block; font: 700 10px/1.5 "DM Sans", sans-serif; letter-spacing: 2px; color: var(--text); margin-top: 8px; }
+    .stage-roles { font-size: 13px; color: #d9d6cf; line-height: 1.7; padding-top: 6px; }
+    .stage-title { font: 800 clamp(40px, 7.4vw, 96px)/.98 Manrope, sans-serif; letter-spacing: -.055em; margin: 0; max-width: 960px; text-shadow: 0 6px 40px rgba(0,0,0,.45); }
+    .stage-title em { color: var(--accent); font-style: normal; }
+    .stage-title .ln { display: block; overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
+    .stage-title .ln span { display: inline-block; animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+    .stage-title .ln:nth-child(2) span { animation-delay: .12s; }
+    .stage-title .ln:nth-child(3) span { animation-delay: .24s; }
+    .hero-row { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 30px 0 34px; }
+    .ticker { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 15px 0; white-space: nowrap; }
+    .ticker-track { display: inline-flex; gap: 0; animation: marquee 32s linear infinite; }
+    .ticker span { font: 800 15px Manrope, sans-serif; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 0 26px; }
+    .ticker span::after { content: "✦"; color: var(--accent); margin-left: 52px; }
+    .hero2 + section { border-top: 0; }
+    @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(214,255,98,0); } 100% { box-shadow: 0 0 0 0 rgba(214,255,98,0); } }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .stage-title .ln span, .ticker-track, .live i { animation: none; } }
+    @media (max-width: 760px) {
+      .stage { aspect-ratio: 4 / 5; /* must match your mobile banner shape */ }
+      .stage-img img { object-position: center; }
+      .stage-top > span:first-child { display: none; }
+      .stage-top { justify-content: flex-start; }
+      .stage::before { background: linear-gradient(0deg, rgba(16,16,16,.95) 0%, rgba(16,16,16,.55) 38%, rgba(16,16,16,0) 68%), linear-gradient(90deg, rgba(16,16,16,.55) 0%, rgba(16,16,16,0) 55%); }
+      .stage-mail { display: none; }
+      .stage-roles { display: none; }
+      .stage-title { letter-spacing: -.045em; }
+      .hero-row { flex-direction: column; align-items: flex-start; padding: 26px 0 30px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home">SHAAN<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">MENU</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a>
+        <a href="#contact" class="nav-cta">Let's talk ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero2" id="home">
+      <div class="wrap">
+        <div class="stage">
+          <picture class="stage-img">
+            <source media="(max-width: 700px)" srcset="images/herobannermob.webp">
+            <img src="images/herobannerweb.webp" alt="Muhammad Shayan (Shaan), graphic designer" fetchpriority="high">
+          </picture>
+          <div class="stage-top">
+            <span>Muhammad Shayan</span>
+            <a class="stage-mail" href="mailto:sanarto0199@gmail.com">sanarto0199@gmail.com</a>
+            <span class="live"><i></i>Available for projects</span>
+          </div>
+          <h1 class="stage-title"><span class="ln"><span>Ideas made</span></span><span class="ln"><span><em>visually</em></span></span><span class="ln"><span>meaningful.</span></span></h1>
+        </div>
+        <div class="hero-row">
+          <p class="intro">I'm Muhammad Shayan, known as Shaan — a graphic designer creating logos, packaging, print, social media, apparel and illustration that make brands stand out.</p>
+          <div class="actions">
+            <a class="btn primary" href="#work">Explore my work ↘</a>
+            <a class="btn" href="https://www.fiverr.com/sanarto_studio" target="_blank" rel="noopener">Hire me on Fiverr ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Logo Design</span><span>Packaging</span><span>Banners &amp; Flyers</span><span>Social Media</span><span>T-shirt Designs</span><span>Illustration</span><span>Stationery</span><span>Logo Design</span><span>Packaging</span><span>Banners &amp; Flyers</span><span>Social Media</span><span>T-shirt Designs</span><span>Illustration</span><span>Stationery</span></div></div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">Selected projects</div><h2>A few things<br>I've created.</h2></div>
+          <p class="section-note">Explore selected projects across logos, packaging, print, social media, apparel, illustration and stationery. Select any category to view four featured pieces.</p>
+        </div>
+        <div class="projects">
+          <article class="project reveal">
+            <a class="project-link" href="logo-design.html" aria-label="View Logo Design projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1634942536790-253d6f7e9ee3?auto=format&fit=crop&w=1100&q=85" alt="Logo Design sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>Logo Design</h3><p>Logos · Brand marks</p></div><span class="project-number">01</span></div>
+          </article>
+          <article class="project reveal">
+            <a class="project-link" href="packaging-design.html" aria-label="View Packaging Design projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=1100&q=85" alt="Packaging Design sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>Packaging Design</h3><p>Product packaging · Labels</p></div><span class="project-number">02</span></div>
+          </article>
+          <article class="project reveal">
+            <a class="project-link" href="banners-flyers.html" aria-label="View Banners & Flyer Design projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=85" alt="Banners & Flyer Design sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>Banners & Flyer Design</h3><p>Banners · Flyers · Posters</p></div><span class="project-number">03</span></div>
+          </article>
+          <article class="project reveal">
+            <a class="project-link" href="social-media-design.html" aria-label="View Social Media Designs projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1100&q=85" alt="Social Media Designs sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>Social Media Designs</h3><p>Posts · Stories · Campaigns</p></div><span class="project-number">04</span></div>
+          </article>
+          <article class="project reveal">
+            <a class="project-link" href="tshirt-designs.html" aria-label="View T-shirt Designs projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1100&q=85" alt="T-shirt Designs sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>T-shirt Designs</h3><p>Apparel · Print graphics</p></div><span class="project-number">05</span></div>
+          </article>
+          <article class="project reveal">
+            <a class="project-link" href="custom-illustration.html" aria-label="View Custom Illustration projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=1100&q=85" alt="Custom Illustration sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>Custom Illustration</h3><p>Original artwork · Illustration</p></div><span class="project-number">06</span></div>
+          </article>
+          <article class="project reveal">
+            <a class="project-link" href="stationery-design.html" aria-label="View Stationery Design projects"><div class="project-art"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1100&q=85" alt="Stationery Design sample" loading="lazy"></div></a>
+            <div class="project-info"><div><h3>Stationery Design</h3><p>Business cards · Letterheads</p></div><span class="project-number">07</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="reveal">
+            <div class="eyebrow">A little about me</div>
+            <h2>Design with<br>purpose & detail.</h2>
+            <div class="stats">
+              <div class="stat"><strong>2021</strong><span>Started my design journey</span></div>
+              <div class="stat"><strong>07</strong><span>Creative service areas</span></div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="about-copy">
+              <p>I'm <strong>Muhammad Shayan (Shaan)</strong>, a graphic designer with over five years of experience turning ideas into clear, memorable visuals.</p>
+              <p>My work focuses on thoughtful visual identities and creative design solutions. I enjoy combining strong concepts, thoughtful typography and precise execution to create designs that look great and communicate clearly.</p>
+              <p>Whether it's a brand's visual identity, a product's packaging or a creative campaign, I approach every project with attention to detail and a focus on quality.</p>
+            </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">What I do</div><h2>Creative services.</h2></div>
+          <p class="section-note">From the first concept to the final design, I create visuals tailored to each project's goals.</p>
+        </div>
+        <div class="services reveal">
+          <div class="service"><span>01 / IDENTITY</span><h3>Logo Design</h3><p>Minimal logos and brand marks.</p></div>
+          <div class="service"><span>02 / PACKAGING</span><h3>Packaging Design</h3><p>Professional packaging and product labels.</p></div>
+          <div class="service"><span>03 / PRINT & WEB</span><h3>Banners & Flyer Design</h3><p>Print-ready flyers, posters and web banners.</p></div>
+          <div class="service"><span>04 / SOCIAL</span><h3>Social Media Designs</h3><p>Social posts, stories and campaign sets.</p></div>
+          <div class="service"><span>05 / APPAREL</span><h3>T-shirt Designs</h3><p>Creative graphics for apparel and merchandise.</p></div>
+          <div class="service"><span>06 / ILLUSTRATION</span><h3>Custom Illustration</h3><p>Original illustrations and creative concepts.</p></div>
+          <div class="service"><span>07 / STATIONERY</span><h3>Stationery Design</h3><p>Business cards, letterheads and branded stationery.</p></div>
+          <a class="service service-cta" href="https://www.fiverr.com/sanarto_studio" target="_blank" rel="noopener"><span>ORDER NOW</span><h3>Hire me on Fiverr ↗</h3><p>View packages and place an order.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Have a project in mind?</div>
+        <h2>Let's create something worth remembering.</h2>
+        <div class="contact-row">
+          <p>Have an idea, a project or a collaboration in mind? I'd love to hear about it. Get in touch and let's bring it to life.</p>
+          <div class="actions">
+            <a class="btn fiverr" href="https://www.fiverr.com/sanarto_studio" target="_blank" rel="noopener">Hire me on Fiverr ↗</a>
+            <a class="btn" href="mailto:sanarto0199@gmail.com">Email me ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Muhammad Shayan (Shaan). All rights reserved.</span>
+      <div class="footer-links">
+        <!-- Add your social profile links when ready. -->
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "CLOSE" : "MENU";
+    });
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "MENU";
+      });
+    });
+
+    // Reveal elements as they enter the screen
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(item => observer.observe(item));
+
+    // Current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
