@@ -105,6 +105,14 @@
       .reveal { opacity:1; transform:none; }
       .eyebrow::before { width:30px; margin-right:10px; }
     }
+
+    /* Fit the whole artwork inside the standard box (no cropping) */
+    .item-art { background:var(--art-bg,#181818); }
+    .item-art img, .item-art video { display:block; width:100%; aspect-ratio:1.4; object-fit:contain; background:transparent; }
+    .item-art video { background:#0d0d0d; }
+    .tag-video { position:absolute; left:12px; top:12px; z-index:2; padding:6px 11px; border-radius:999px; background:rgba(16,16,16,.85); color:var(--accent); font:700 11px/1 "DM Sans",sans-serif; letter-spacing:1.4px; text-transform:uppercase; pointer-events:none; }
+    .lb video { max-width:100%; max-height:calc(100vh - 150px); width:auto; height:auto; border-radius:5px; background:#000; box-shadow:0 30px 80px -20px #000; display:none; }
+    .lb.is-video video { display:block; } .lb.is-video img { display:none; }
   </style>
 </head>
 <body>
@@ -114,32 +122,53 @@
     <div class="hero"><div class="wrap"><div class="eyebrow">Selected projects / 04</div><h1>Social Media Designs.</h1><p class="intro">Social media visuals designed for clear communication and a consistent feed across platforms.</p></div></div>
     <section><div class="wrap"><div class="grid">
       <article class="item reveal">
-        <div class="item-art">
-          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=85" alt="Social Media Designs 01" loading="lazy" decoding="async">
-          <button type="button" class="view-full btn-shine" data-full="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&amp;fit=crop&amp;w=2400&amp;q=90" data-title="Social Media Designs 01" data-sub="Social media visual" aria-label="Click to view full project: Social Media Designs 01">Click to view full project</button>
+        <div class="item-art" style="--art-bg:#ffffff">
+          <img src="images/social-media-design-01.jpg" alt="Al-Naseeb social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-01.jpg" data-title="Al-Naseeb" data-sub="Campaign posts, banners and app promotions for a dry fruits brand" aria-label="Click to view full project: Al-Naseeb">Click to view full project</button>
         </div>
-        <div class="caption"><h2>Social Media Designs 01</h2><p>Social media visual</p></div>
+        <div class="caption"><h2>Al-Naseeb</h2><p>Campaign posts, banners and app promotions for a dry fruits brand</p></div>
       </article>
       <article class="item reveal">
-        <div class="item-art">
-          <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&q=85" alt="Social Media Designs 02" loading="lazy" decoding="async">
-          <button type="button" class="view-full btn-shine" data-full="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&amp;fit=crop&amp;w=2400&amp;q=90" data-title="Social Media Designs 02" data-sub="A consistent social campaign" aria-label="Click to view full project: Social Media Designs 02">Click to view full project</button>
+        <div class="item-art" style="--art-bg:#f5edd9">
+          <img src="images/social-media-design-02.jpg" alt="Simple Design Studio social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-02.jpg" data-title="Simple Design Studio" data-sub="Real estate listing and brand posts for a design studio" aria-label="Click to view full project: Simple Design Studio">Click to view full project</button>
         </div>
-        <div class="caption"><h2>Social Media Designs 02</h2><p>A consistent social campaign</p></div>
+        <div class="caption"><h2>Simple Design Studio</h2><p>Real estate listing and brand posts for a design studio</p></div>
       </article>
       <article class="item reveal">
-        <div class="item-art">
-          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85" alt="Social Media Designs 03" loading="lazy" decoding="async">
-          <button type="button" class="view-full btn-shine" data-full="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&amp;fit=crop&amp;w=2400&amp;q=90" data-title="Social Media Designs 03" data-sub="A polished digital layout" aria-label="Click to view full project: Social Media Designs 03">Click to view full project</button>
+        <div class="item-art" style="--art-bg:#e4e5e7">
+          <img src="images/social-media-design-03.jpg" alt="Espial Tool social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-03.jpg" data-title="Espial Tool" data-sub="Newspaper-style campaign graphic for a marketing and IT company" aria-label="Click to view full project: Espial Tool">Click to view full project</button>
         </div>
-        <div class="caption"><h2>Social Media Designs 03</h2><p>A polished digital layout</p></div>
+        <div class="caption"><h2>Espial Tool</h2><p>Newspaper-style campaign graphic for a marketing and IT company</p></div>
       </article>
       <article class="item reveal">
-        <div class="item-art">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85" alt="Social Media Designs 04" loading="lazy" decoding="async">
-          <button type="button" class="view-full btn-shine" data-full="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=2400&amp;q=90" data-title="Social Media Designs 04" data-sub="Post and story series" aria-label="Click to view full project: Social Media Designs 04">Click to view full project</button>
+        <div class="item-art" style="--art-bg:#ffffff">
+          <img src="images/social-media-design-04.jpg" alt="Pak Punjab Tyres social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-04.jpg" data-title="Pak Punjab Tyres" data-sub="Daily posts, tips and occasion greetings for a tyre brand" aria-label="Click to view full project: Pak Punjab Tyres">Click to view full project</button>
         </div>
-        <div class="caption"><h2>Social Media Designs 04</h2><p>Post and story series</p></div>
+        <div class="caption"><h2>Pak Punjab Tyres</h2><p>Daily posts, tips and occasion greetings for a tyre brand</p></div>
+      </article>
+      <article class="item reveal">
+        <div class="item-art" style="--art-bg:#ffffff">
+          <img src="images/social-media-design-05.jpg" alt="House of Presence social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-05.jpg" data-title="House of Presence" data-sub="Fragrance launches and occasion posts for a perfume house" aria-label="Click to view full project: House of Presence">Click to view full project</button>
+        </div>
+        <div class="caption"><h2>House of Presence</h2><p>Fragrance launches and occasion posts for a perfume house</p></div>
+      </article>
+      <article class="item reveal">
+        <div class="item-art" style="--art-bg:#ffffff">
+          <img src="images/social-media-design-06.jpg" alt="Liquid Wraps & Orbit College social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-06.jpg" data-title="Liquid Wraps &amp;amp; Orbit College" data-sub="Car-care ads and education campaign posts" aria-label="Click to view full project: Liquid Wraps &amp;amp; Orbit College">Click to view full project</button>
+        </div>
+        <div class="caption"><h2>Liquid Wraps &amp; Orbit College</h2><p>Car-care ads and education campaign posts</p></div>
+      </article>
+      <article class="item reveal">
+        <div class="item-art" style="--art-bg:#ffffff">
+          <img src="images/social-media-design-07.jpg" alt="Zayre Home social media design samples" loading="lazy" decoding="async">
+          <button type="button" class="view-full btn-shine" data-full="images/social-media-design-07.jpg" data-title="Zayre Home" data-sub="Product showcase posts for a luxury furniture brand" aria-label="Click to view full project: Zayre Home">Click to view full project</button>
+        </div>
+        <div class="caption"><h2>Zayre Home</h2><p>Product showcase posts for a luxury furniture brand</p></div>
       </article>
     </div></div></section>
     <div class="wrap pager reveal"><a href="banners-flyers.html">← Banners & Flyer Design</a><a href="tshirt-designs.html">T-shirt Designs →</a></div>
@@ -149,7 +178,7 @@
 
   <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Full project view">
     <button type="button" class="lb-close" id="lbClose">Close ✕</button>
-    <div class="lb-inner"><img id="lbImg" alt=""><div class="lb-cap" id="lbCap"></div></div>
+    <div class="lb-inner"><img id="lbImg" alt=""><video id="lbVid" controls playsinline loop></video><div class="lb-cap" id="lbCap"></div></div>
   </div>
 
   <script>
@@ -169,27 +198,41 @@
     }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
-    // Full project viewer
+    // Full project viewer (images and videos)
     (function () {
-      var lb = document.getElementById("lb"), img = document.getElementById("lbImg"),
+      var lb = document.getElementById("lb"), img = document.getElementById("lbImg"), vid = document.getElementById("lbVid"),
           cap = document.getElementById("lbCap"), closeBtn = document.getElementById("lbClose"), last = null;
       function open(btn) {
         last = btn;
-        img.src = btn.dataset.full; img.alt = btn.dataset.title;
+        var isVideo = btn.dataset.type === "video";
+        lb.classList.toggle("is-video", isVideo);
+        if (isVideo) { vid.src = btn.dataset.full; vid.poster = btn.dataset.poster || ""; img.removeAttribute("src"); }
+        else { img.src = btn.dataset.full; img.alt = btn.dataset.title; vid.removeAttribute("src"); }
         cap.innerHTML = "<strong></strong><span></span>";
         cap.firstChild.textContent = btn.dataset.title; cap.lastChild.textContent = btn.dataset.sub;
         lb.classList.add("open"); document.body.classList.add("lb-open");
-        requestAnimationFrame(function () { lb.classList.add("show"); closeBtn.focus(); });
+        requestAnimationFrame(function () { lb.classList.add("show"); closeBtn.focus(); if (isVideo) { var p = vid.play(); if (p && p.catch) p.catch(function () {}); } });
       }
       function close() {
         lb.classList.remove("show"); document.body.classList.remove("lb-open");
-        setTimeout(function () { lb.classList.remove("open"); img.removeAttribute("src"); }, 300);
+        vid.pause();
+        setTimeout(function () { lb.classList.remove("open"); img.removeAttribute("src"); vid.removeAttribute("src"); vid.load(); }, 300);
         if (last) last.focus();
       }
       document.querySelectorAll(".view-full").forEach(function (b) { b.addEventListener("click", function () { open(b); }); });
       closeBtn.addEventListener("click", close);
       lb.addEventListener("click", function (e) { if (e.target === lb || e.target.classList.contains("lb-inner")) close(); });
       addEventListener("keydown", function (e) { if (e.key === "Escape" && lb.classList.contains("open")) close(); });
+    })();
+
+    // Preview videos play only while visible
+    (function () {
+      var vids = document.querySelectorAll("video.preview-vid");
+      if (!vids.length || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var vo = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); });
+      }, { threshold: 0.35 });
+      vids.forEach(function (v) { vo.observe(v); });
     })();
 
     // Email: Gmail compose on desktop, normal mail app on phones
